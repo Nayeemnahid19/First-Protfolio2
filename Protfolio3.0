@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Personal Portfolio Website using HTML and CSS</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        .navhar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .navhar .logo {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .navhar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navhar ul li {
+            margin-left: 20px;
+        }
+        .navhar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .navhar ul li a:hover,
+        .navhar ul li a.active {
+            color: #7cf03d;
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            padding: 100px 10%;
+            background-color: #fff;
+        }
+        .home-info {
+            max-width: 50%;
+        }
+        .home-info h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .home-info h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .home-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn-sci {
+            display: flex;
+            align-items: center;
+        }
+        .btn-sci .btn {
+            padding: 10px 20px;
+            background-color: #7cf03d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .sci a {
+            color: #333;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        .sci a:hover {
+            color: #7cf03d;
+        }
+
+        /* Image Section */
+        .home-img {
+            position: relative;
+            max-width: 40%;
+            padding-bottom: 40px;
+        }
+        .img-box {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #7cf03d;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .home {
+                flex-direction: column;
+                padding: 50px 5%;
+            }
+            .home-info h1 {
+                font-size: 30px;
+            }
+            .home-info h2 {
+                font-size: 22px;
+            }
+            .home-info p {
+                font-size: 14px;
+            }
+            .home-img .img-box {
+                width: 200px;
+                height: 200px;
+            }
+            .home-img .img-box::before,
+            .home-img .img-box::after {
+                width: 200px;
+                height: 200px;
+            }
+            .navhar {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .navhar ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .navhar ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <nav class="navhar">
+    <a href="#" class="logo">Portfolio</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Service</a></li>
+    </ul>
+   </nav>
+
+   <div class="bar-animation">
+     <div class="bar"></div>
+     <div class="bar"></div>
+     <div class="bar"></div>
+     <div class="bar"></div>
+     <div class="bar"></div>
+     <div class="bar"></div>
+   </div>
+
+   <section class="home">
+    <div class="home-info">
+        <h1>Nayeem Hasan Nahid</h1>
+        <h2>I'm a Student of Pharmacy Department</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui adipisci quia veniam
+harum sequi amet blanditiis labore voluptate architecto? Laudantium in ratione beatae hic, omnis,
+odio officia vitae eaque esse iure incidunt! Possimus quam esse dolores. Obcaecati nostrum omnis impedit 
+vero, ullam consectetur molestias temporibus nihil error illo eveniet porro?</p>
+        <div class="btn-sci">
+            <a href="#" class="btn">Download CV</a>
+            <div class="sci">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="home-img">
+        <div class="img-box">
+            <div class="img-item">
+                <img src="IMG2_1094.png" alt="Profile Image">
+            </div>
+        </div>
+    </div>
+   </section>
+    
+</body>
+</html>
